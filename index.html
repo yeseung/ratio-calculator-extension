@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <title>비율계산기 (Ratio Calculator)</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body style="width: 510px">
+<div class="container" id="ratiocal" tabindex="-1" aria-label="비율계산기">
+    <form name="ratio" method="post" id="ratio-form" autocomplete="off">
+        <header class="header">
+            <h1>Ratio Calculator (비율계산기)</h1>
+            <button type="reset" id="reset" class="btn ghost">Clear</button>
+            <button type="button" id="result" class="btn primary">Calculate</button>
+        </header>
+
+        <div class="grid">
+            <label class="field">
+                <span class="label">Width A</span>
+                <input type="number" name="a" inputmode="decimal" placeholder="Width A" />
+            </label>
+            <label class="field">
+                <span class="label">Height B</span>
+                <input type="number" name="b" inputmode="decimal" placeholder="Height B" />
+            </label>
+            <label class="field">
+                <span class="label">Width C</span>
+                <input type="number" name="c" inputmode="decimal" placeholder="Width C" />
+            </label>
+            <label class="field">
+                <span class="label">Height D</span>
+                <input type="number" name="d" inputmode="decimal" placeholder="Height D" />
+            </label>
+        </div>
+    </form>
+
+    <section id="ratio" class="quick-actions" aria-label="빠른 설정">
+        <!-- C/D 비우기 -->
+        <button type="button" class="chip" data-action="clear-cd">─ : ─ = C : ?</button>
+        <button type="button" class="chip" data-action="clear-dc">─ : ─ = ? : D</button>
+
+        <!-- 자주 쓰는 화면비 비율 -->
+        <button type="button" class="chip" data-aspect="16:9" data-target="c">16 : 09 = C : ?</button>
+        <button type="button" class="chip" data-aspect="16:9" data-target="d">16 : 09 = ? : D</button>
+
+        <button type="button" class="chip" data-aspect="4:5"  data-target="c">04 : 05 = C : ?</button>
+        <button type="button" class="chip" data-aspect="4:5"  data-target="d">04 : 05 = ? : D</button>
+
+        <button type="button" class="chip" data-aspect="4:3"  data-target="c">04 : 03 = C : ?</button>
+        <button type="button" class="chip" data-aspect="4:3"  data-target="d">04 : 03 = ? : D</button>
+
+        <button type="button" class="chip" data-aspect="1:16" data-target="c">01 : 16 = C : ?</button>
+        <button type="button" class="chip" data-aspect="1:16" data-target="d">01 : 16 = ? : D</button>
+    </section>
+
+    <section id="hz-guide" class="guide">
+        <h2>Usage Guide (이용 가이드)</h2>
+        <ol>
+            <li>Automatically calculates the ratio in the form <strong>A : B = C : D</strong>.</li>
+            <li>If you enter <strong>exactly 3 out of the 4 fields</strong>, the remaining field will be calculated automatically.</li>
+            <li>If all 4 fields are filled, a warning message will be displayed.</li>
+            <li>Only numeric input is allowed.</li>
+            <li>Use cases: resizing photos, calculating video aspect ratios, etc.</li>
+        </ol>
+    </section>
+</div>
+
+<footer class="footer">
+    [AD]&nbsp;&nbsp;<a href="https://kimtaja.com" target="_blank" rel="noreferrer">추억 속 타자 연습, 다시 시작해볼까요? - https://kimtaja.com</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
