@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Ratio Calculator (비율계산기)",
-    "description": "It is a Chrome extension that provides an A:B = C:D ratio calculator, which automatically calculates the remaining field when you enter 3 out of 4 fields.",
+    "description": "A Chrome extension that calculates A:B = C:D ratios, filling the last field when 3 of 4 are entered.",
     "version": "1.0",
     "action": {
         "default_popup": "index.html",
